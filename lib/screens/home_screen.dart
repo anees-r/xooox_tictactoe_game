@@ -41,12 +41,23 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Expanded(
             flex: 2,
-            child: Container(
-              margin: const EdgeInsets.only(top: 130),
-              child: Image.asset(
-                xoooxLogo,
-                scale: 3,
-              ),
+            child: Column(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 100),
+                  child: Image.asset(
+                    xoooxLogo,
+                    scale: 3,
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  oTurn ? "O's Turn" : "X's Turn",
+                  style: headerText,
+                ),
+              ],
             ),
           ),
           Expanded(
@@ -91,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Expanded(
             flex: 2,
             child: Container(
-              //margin: const EdgeInsets.only(bottom: 40),
+              margin: const EdgeInsets.only(bottom: 40),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -201,6 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
           return BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
             child: AlertDialog(
+              shadowColor: Colors.black,
               backgroundColor: mainAccent,
               title: Text(
                 "V I C T O R Y !",
@@ -248,6 +260,7 @@ class _HomeScreenState extends State<HomeScreen> {
             filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
             child: AlertDialog(
               backgroundColor: mainAccent,
+              shadowColor: Colors.black,
               title: Text(
                 "D R A W !",
                 style: headerText,

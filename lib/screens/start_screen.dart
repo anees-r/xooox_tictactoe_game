@@ -30,7 +30,7 @@ class StartScreen extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(bottom: 130),
+            margin: const EdgeInsets.only(bottom: 65),
             height: 60,
             width: 240,
             child: ElevatedButton(
@@ -48,6 +48,17 @@ class StartScreen extends StatelessWidget {
                     color: Color(0xFF1d1923),
                   ),
                 )),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 65),
+            child: Text(
+              "Developed by anees-r",
+              style: TextStyle(
+                fontFamily: "Hoves",
+                fontSize: 20,
+                color: Colors.white.withOpacity(0.5),
+              ),
+            ),
           ),
         ],
       ),
